@@ -3,7 +3,7 @@ Free and opensource platform for recipies, written in PHP and HTML/CSS.
 
 ## Example recipie
 
-Pasta with tomato sauce
+\# Pasta with tomato sauce
 
 DATE: 2021-03-06
 
@@ -18,7 +18,7 @@ DATE: 2021-03-06
 - 2 carrots
 - 4dl with any kind of broth.
 
-TODO
+\#\# TODO
 
 - Julienne the onion.
 - Saute the onion, add the tomato paste when the onion is starting to go clear.
