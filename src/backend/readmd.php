@@ -10,7 +10,7 @@ class ParseRecipies {
     }
 
     private function getFiles() {
-        $path = __DIR__ . "/../recipies";
+        $path = __DIR__ . "/../recipes";
         $files = scandir($path);
         $files = array_diff($files, array(".", ".."));
         $file_arr = array();
@@ -27,7 +27,7 @@ class ParseRecipies {
 
     private function parsePost($file) {
         $file = fopen($file, "r");
-        $element = "<div class='recipie_card'>";
+        $element = "<div class='recipe_card'>";
         while(($line = fgets($file)) !== false) {
             if (preg_match("/^#/", $line)) {
                 $element .= "<h1>" . str_replace("#", "", $line) . "</h1>";

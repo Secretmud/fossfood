@@ -3,7 +3,7 @@ body {
     grid-template-columns: 45% 45%;
     justify-content: space-around;
 }
-.recipie_card {
+.recipe_card {
     border: 1px solid black;
     width: 100%;
     word-wrap: break-word;
