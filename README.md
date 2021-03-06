@@ -28,7 +28,6 @@ DATE: 2021-03-06
 - Let it simmer on low heat for 30-40 minutes.
 - Add the spices.
 - Let it simmer for another 40 minutes.
-- Heat up water for the pasta, add salt when the water has hit a rolling boil ("Salato come il mare
-" is key here).
+- Heat up water for the pasta, add salt when the water has hit a rolling boil ("Salato come il mare" is key here).
 - Save a cup of pasta water when the pasta is done and add some to the sauce if it's not thickyet.
 - Enjoy a freshly cooked pasta dish! Parmigiano is optional but reccomended.
