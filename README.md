@@ -1,7 +1,7 @@
 # fossfood
-Free and opensource platform for recipies, written in PHP and HTML/CSS.
+Free and opensource platform for recipes, written in PHP and HTML/CSS.
 
-## Example recipie
+## Example recipe
 
 \# Pasta with tomato sauce
 
