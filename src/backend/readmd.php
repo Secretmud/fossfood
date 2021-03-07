@@ -48,7 +48,7 @@ class ParseRecipies {
         $find_files = $this->getFiles();
         $match = array();
         for ($i = 0; $i < sizeof($find_files); $i++) {
-            if (stripos(strtolower(str_replace("-", " ", $find_files[$i][0])), $word) !== false) {
+            if (stripos(strtolower(str_replace("-", " ", $find_files[$i][1])), $word) !== false) {
                 array_push($match, $find_files[$i][0]);
             }
         }
