@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 include "backend/readmd.php";
-$recipies = new ParseRecipies();
+$recipies = new ParseRecipies("");
 ?>
 <head>
     <meta charset="UTF-8">
