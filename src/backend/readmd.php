@@ -1,6 +1,12 @@
 <?php
 
 class ParseRecipies {
+
+    private static String $category;
+    function __construct(String $category) {
+        $this->category = $category;
+    }
+
     public function lastFive() {
         $find_last = $this->getFiles();
         for ($i = 0; $i < sizeof($find_last); $i++) {
@@ -10,7 +16,7 @@ class ParseRecipies {
     }
 
     private function getFiles() {
-        $path = __DIR__ . "/../recipes";
+        $path = __DIR__ . "/../recipes" . $this->category;
         $files = scandir($path);
         $files = array_diff($files, array(".", ".."));
         $file_arr = array();
