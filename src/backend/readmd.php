@@ -2,21 +2,22 @@
 
 class ParseRecipies {
 
-    private static String $category;
+    private String $category;
     function __construct(String $category) {
         $this->category = $category;
     }
 
     public function lastFive() {
-        $find_last = $this->getFiles();
-        for ($i = 0; $i < sizeof($find_last); $i++) {
-            $this->parsePost($find_last[$i][0]);
-            if ($i == 4) break;
+        $files = opendir(__DIR__ . "/../recipes/" . $this->category);
+        $amount = (sizeof($files) >= 5) ? 5 : sizeof($files);
+        $rndfiles = array_rand($files, $amount);
+        for ($i = 0; $i < $amount; $i++) {
+            $this->parsePost($files[$i]);
         }
     }
 
     private function getFiles() {
-        $path = __DIR__ . "/../recipes" . $this->category;
+        $path = __DIR__ . "/../recipes/" . $this->category;
         $files = scandir($path);
         $files = array_diff($files, array(".", ".."));
         $file_arr = array();

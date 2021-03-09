@@ -1,20 +1,42 @@
+
+
 body {
     display: grid;
-    grid-template-columns: 45% 45%;
+    grid-template-columns: repeat(2, 50%);
     justify-content: space-around;
 }
 .recipe_card {
     border: 1px solid black;
     width: 100%;
     word-wrap: break-word;
-    margin: 5px;
     padding: 5px;
 }
 
 .search_field {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: auto;
     align-items: baseline;
+    margin-bottom: 5px;
+}
+
+.five, .search {
     margin: 5px;
+    padding: 5px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation > a {
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    text-decoration: none;
+}
+
+.navigation > a:hover {
+    margin-left: 15px;
 }
