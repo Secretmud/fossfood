@@ -3,23 +3,23 @@
 class ParseRecipies {
 
     private String $category;
+    private String $path;
     function __construct(String $category) {
         $this->category = $category;
+        $this->path = __DIR__ . "/../recipes/" . $category;
     }
 
     public function lastFive() {
-        $path = __DIR__ . "/../recipes/" . $this->category;
-        $files = scandir($path);
+        $files = scandir($this->path);
         $files = array_diff($files, array(".", ".."));
-        $amount = (sizeof($files) >= 5) ? 5 : sizeof($files);
-        for ($i = 0; $i < $amount; $i++) {
-            $this->parsePost($path . "/" . $files[$i]);
+        $amount = (sizeof($files) >= 5) ? 7 : sizeof($files) + 2;
+        for ($i = 2; $i < $amount; $i++) {
+            $this->parsePost($this->path . "/" . $files[$i]);
         }
     }
 
     private function getFiles() {
-        $path = __DIR__ . "/../recipes/" . $this->category;
-        $files = scandir($path);
+        $files = scandir($this->path);
         $files = array_diff($files, array(".", ".."));
         $file_arr = array();
         foreach ($files as $i) {
