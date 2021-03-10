@@ -8,11 +8,12 @@ class ParseRecipies {
     }
 
     public function lastFive() {
-        $files = opendir(__DIR__ . "/../recipes/" . $this->category);
+        $path = __DIR__ . "/../recipes/" . $this->category;
+        $files = scandir($path);
+        $files = array_diff($files, array(".", ".."));
         $amount = (sizeof($files) >= 5) ? 5 : sizeof($files);
-        $rndfiles = array_rand($files, $amount);
         for ($i = 0; $i < $amount; $i++) {
-            $this->parsePost($files[$i]);
+            $this->parsePost($path . "/" . $files[$i]);
         }
     }
 
