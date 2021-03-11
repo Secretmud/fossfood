@@ -34,7 +34,7 @@ $recipies = new ParseRecipies("drinks");
     </div>
     <div class="five">
         <?php 
-            $recipies->lastFive();
+            $recipies->fiveRandom();
         ?>
     </div>
     
