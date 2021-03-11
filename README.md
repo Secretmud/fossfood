@@ -17,7 +17,7 @@ means) by visiting the address ``localhost:8080``.
 ## Contribute recipes?
 
 Use basic Markdown syntax like # and ##.  To display the date of
-creation, use DATE: YYYY-MM-DD
+creation, use DATE: YYYY-MM-DD.
 
 Start the document with the name of the dish or the drink you want to
 contribute.  Add measurements where they apply, followed by the
