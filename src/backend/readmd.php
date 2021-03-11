@@ -1,6 +1,6 @@
 <?php
 
-class ParseRecipies {
+class ParseRecipes {
 
     private String $category;
     private String $path;
@@ -12,9 +12,9 @@ class ParseRecipies {
     }
 
     /*
-        ParseRecipies->fiveRandom() 
-        grab five random recipies, if there is less than 5 return the amount of 
-        available recipies.
+        ParseRecipes->fiveRandom() 
+        grab five random recipes; if there are less than 5, return the amount of 
+        available recipes.
     */
     public function fiveRandom() {
         $files = scandir($this->path);
