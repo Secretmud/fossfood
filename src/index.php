@@ -22,7 +22,7 @@ $food = new ParseRecipies("food");
     </nav>
     <div class="information">
         Total amount of recipies: <?php echo ($drinks->total + $food->total) ?><br>
-        This is made up of <?php echo $drinks->total ?> drink(s) and <?php echo $food->total ?> food(s).
+        This is made up of <?php echo $drinks->total ?> drink(s) and <?php echo $food->total ?> dish(es).
     </div>
     <div class="support">
         If you enjoy this project, feel free to support it on <a href="https://github.com/Secretmud/fossfood" target="_blank">GitHub</a>
