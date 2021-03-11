@@ -74,7 +74,6 @@ class ParseRecipes {
                     }
                 }
             }
-    
             if (sizeof($match) > 0) {
                 for ($i = 0; $i < sizeof($match); $i++) {
                     $this->parsePost($match[$i]);
@@ -82,7 +81,6 @@ class ParseRecipes {
             }
         } else {
             echo "";
-        }
-        
+        } 
     }
 }

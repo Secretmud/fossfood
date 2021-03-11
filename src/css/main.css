@@ -28,18 +28,18 @@ input {
     box-sizing: border-box;
 }
 
-.search_field > input:nth-child(1) {
+#find {
     padding-left: 12px;
     border-radius: 12px 0px 0px 12px;
     border: 1px solid black;
 }
 
-.search_field > input:nth-child(2) {
+#search {
     border-radius: 0;
     border: 1px solid black;
 }
 
-.search_field > input:nth-child(3) {
+#reset {
     border-radius: 0px 12px 12px 0px;
     border: 1px solid black;
 }
@@ -70,11 +70,10 @@ input {
 
 .support > a {
     text-decoration: none;
-    color: orange;
+    color: black;
     padding-left: 5px;
 }
 
 .support > a:hover {
     text-decoration: underline;
-    color: black;
 }
