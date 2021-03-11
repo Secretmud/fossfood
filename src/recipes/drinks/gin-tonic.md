@@ -1,17 +1,16 @@
-# The original Gin Tonic 
+# The original gin and tonic
 
 DATE: 2021-03-09
 
-- 2cl of Gin
 - Tall glass
+- 2cl of gin
 - 3-5 ice cubes
 - Tonic water
 - Lemon wedge
 
+## Directions
 
-## TODO
-
-- Add the gin and ice to the glass
-- Add the lemon wedge
-- Stir
-- Top with tonic water
+- Add the gin and the ice to the glass.
+- Add the lemon wedge.
+- Stir.
+- Top with tonic water.
