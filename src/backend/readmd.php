@@ -11,9 +11,9 @@ class ParseRecipies {
 
     public function lastFive() {
         $files = scandir($this->path);
-        $files = array_diff($files, array(".", ".."));
-        $amount = (sizeof($files) >= 5) ? 7 : sizeof($files) + 2;
-        for ($i = 2; $i < $amount; $i++) {
+        $files = array_values(array_diff($files, array(".", "..")));
+        $amount = (sizeof($files) >= 5) ? 5 : sizeof($files);
+        for ($i = 0; $i < $amount; $i++) {
             $this->parsePost($this->path . "/" . $files[$i]);
         }
     }
@@ -24,8 +24,8 @@ class ParseRecipies {
         $file_arr = array();
         foreach ($files as $i) {
             if ($i != "." || $i != "..") {
-                $f = fopen($path."/".$i, "r");
-                array_push($file_arr, array($path."/". $i, fgets($f)));
+                $f = fopen($this->path."/".$i, "r");
+                array_push($file_arr, array($this->path."/". $i, fgets($f)));
                 fclose($f);
             }
         }
@@ -55,16 +55,24 @@ class ParseRecipies {
     public function search($word) {
         $find_files = $this->getFiles();
         $match = array();
-        for ($i = 0; $i < sizeof($find_files); $i++) {
-            if (stripos(strtolower(str_replace("-", " ", $find_files[$i][1])), $word) !== false) {
-                array_push($match, $find_files[$i][0]);
+        if ($word !== "") {
+            for ($i = 0; $i < sizeof($find_files); $i++) {
+                $check = preg_split("/[\s]+/", $find_files[$i][1]);
+                for ($x = 0; $x < sizeof($check); $x++) {
+                    if (strtolower($check[$x]) === strtolower($word)) {
+                        array_push($match, $find_files[$i][0]);
+                    }
+                }
             }
-        }
-
-        if (sizeof($match) > 0) {
-            for ($i = 0; $i < sizeof($match); $i++) {
-                $this->parsePost($match[$i]);
+    
+            if (sizeof($match) > 0) {
+                for ($i = 0; $i < sizeof($match); $i++) {
+                    $this->parsePost($match[$i]);
+                }
             }
+        } else {
+            echo "";
         }
+        
     }
 }

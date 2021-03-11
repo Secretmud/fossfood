@@ -13,20 +13,28 @@ $recipies = new ParseRecipies("drinks");
     <title>FOSS food</title>
 </head>
 <body>
-    <div class="five">
-        <?php 
-            $recipies->lastFive();
-        ?>
-    </div>
+    <nav class="navigation">
+        <a href="index.php">Home</a>
+        <a href="drinks.php">Drinks</a>
+        <a href="food.php">Food</a>
+    </nav>
     <div class="search">
         <form class="search_field" action="" method="get">
             <input name="find" type="text">
             <input name="search" type="submit" value="Search">
+            <input name="reset" type="submit" value="Reset">
         </form>
         <?php 
             if (isset($_GET["search"])) {
                 $recipies->search(htmlspecialchars($_GET["find"]));
+            } else if (isset($_GET["reset"])) {
+                $recipies->search(htmlspecialchars(""));
             }
+        ?>
+    </div>
+    <div class="five">
+        <?php 
+            $recipies->lastFive();
         ?>
     </div>
     
