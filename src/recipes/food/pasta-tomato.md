@@ -4,10 +4,10 @@ DATE: 2021-03-06
 
 - 100g of pasta
 - 4dl of crushed tomato sauce
-- 1 tbsp salt
-- 1 tbsp pepper
-- 2 tbsp garlic powder
-- 1 tbps cumin
+- salt
+- pepper
+- garlic powder
+- cumin
 - 2 tbps tomato paste
 - 1/2 medium onion
 - 2 carrots

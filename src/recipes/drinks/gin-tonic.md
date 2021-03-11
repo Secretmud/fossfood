@@ -14,4 +14,4 @@ DATE: 2021-03-09
 - Add the gin and ice to the glass
 - Add the lemon wedge
 - Stir
-- Top with tonic wate.
+- Top with tonic water
