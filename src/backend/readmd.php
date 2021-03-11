@@ -4,17 +4,27 @@ class ParseRecipies {
 
     private String $category;
     private String $path;
+    public int $total;
     function __construct(String $category) {
         $this->category = $category;
         $this->path = __DIR__ . "/../recipes/" . $category;
+        $this->total = sizeof($this->getFiles());
     }
 
-    public function lastFive() {
+    /*
+        ParseRecipies->fiveRandom() 
+        grab five random recipies, if there is less than 5 return the amount of 
+        available recipies.
+    */
+    public function fiveRandom() {
         $files = scandir($this->path);
         $files = array_values(array_diff($files, array(".", "..")));
-        $amount = (sizeof($files) >= 5) ? 5 : sizeof($files);
-        for ($i = 0; $i < $amount; $i++) {
-            $this->parsePost($this->path . "/" . $files[$i]);
+        $amount = ($this->total >= 5) ? 5 : $this->total;
+        $picks = array_rand($files, $amount);
+        if ($amount === 1)
+            $picks = array($picks);
+        for ($i = 0; $i < sizeof($picks); $i++) {
+            $this->parsePost($this->path . "/" . $files[$picks[$i]]);
         }
     }
 
