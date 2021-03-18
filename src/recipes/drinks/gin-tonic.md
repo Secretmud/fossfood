@@ -10,7 +10,7 @@ DATE: 2021-03-09
 
 ## Directions
 
-- Add the gin and the ice to the glass.
-- Add the lemon wedge.
-- Stir.
-- Top with tonic water.
+1. Add the gin and the ice to the glass.
+1. Add the lemon wedge.
+1. Stir.
+1. Top with tonic water.
