@@ -1,6 +1,6 @@
 # Vodka Martini
 
-## Ingredients
+DATE: 2021-03-18
 
 - Cocktail glass
 - Cocktail shaker filled with ice
